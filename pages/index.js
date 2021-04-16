@@ -1,65 +1,120 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <video playsInline autoPlay muted loop className={styles.video}>
+        <source src="fire.mp4" type="video/mp4" />
+      </video>
+      <div className={styles.container}>
+        <Head>
+          <title>Cool Man, Luke Boshers</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            My name is Lucas...
+          </h1>
+            <h3>But you can call me Luke</h3>
+            <Image
+              src="/zombies.jpeg"
+              alt="Picture of the author"
+              width={600}
+              height={600}
+            />
+            <p>... or Cool Man</p>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h3>First Off, Pizza is life.</h3>
+              <video playsInline autoPlay muted loop className={styles.image}>
+                <source src="pizza.mp4" type="video/mp4" />
+              </video>
+            </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <div className={styles.card}>
+              <h3>I've been on the news.</h3>
+              <Image
+                  src="/court.jpeg"
+                  alt="Talkin to the news"
+                  width={400}
+                  height={400}
+              />
+            </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <div className={styles.card}>
+              <h3>I'm never scared.</h3>
+              <Image
+                  src="/scared.jpeg"
+                  alt="Not scared"
+                  width={640}
+                  height={640}
+              />
+              <p>Met a bat demon dude, didn't even trip, dawg.</p>
+            </div>
 
+            <div className={styles.card}>
+              <h3>Your face...</h3>
+              <Image
+                  src="/cryin.jpeg"
+                  alt="How you look when I steal your girl"
+                  width={640}
+                  height={640}
+              />
+              <p>When I slide up to steal ya girl. She mine now.</p>
+            </div>
+
+            <div className={styles.card}>
+              <h3>Heck yeah I play wit fire</h3>
+              <Image
+                  src="/sparkler.jpg"
+                  alt="Comin to steal your girl"
+                  width={640}
+                  height={853}
+              />
+              <p>Shoot, I even walked across hot lava. You know magma.</p>
+            </div>
+
+            <div className={styles.card}>
+              <h3>Dug up a mummy once</h3>
+              <Image
+                  src="/vibin.jpeg"
+                  alt="Digging for gold"
+                  width={640}
+                  height={853}
+              />
+              <p>He got mad. Hit 'em with the ol 1-2. Now he's dust.</p>
+            </div>
+
+            <div className={styles.card}>
+              <h3>For real tho</h3>
+              <Image
+                  src="/chillin.jpeg"
+                  alt="Resting easy"
+                  width={640}
+                  height={640}
+              />
+              <p>Most of the time, I'm chillin' at the house.</p>
+            </div>
+
+            <p>Thank you for stopping by my little slice of internet paradise. Hope you have a nice evening.</p>
+          </div>
+        </main>
+
+        <footer className={styles.footer}>
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+            href="https://boshe.rs"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            My dad made this. He's a bit of a dick.{' '}
+            <img src="/logo.svg" alt="Dad Logo" className={styles.logo} />
           </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </>
   )
 }
